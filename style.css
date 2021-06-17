@@ -1,5 +1,7 @@
 @import url(reset.css);
 
+/* Косметика - добавить везде курсор, сделать ховера, выровняьт шары */
+
 body{
     display: flex;
     flex-direction: column;
@@ -62,12 +64,15 @@ nav ul{
 
 .Header_LeftForm{
     justify-content: start;
+    
+}
+.Header_LeftForm_Text{
     max-height: 50px;
-    max-width: 520px;
     font-family: "Gotham";
     font-size: 16px;
     color:white;
     font-weight: 600;
+    max-width: 520px;
 }
 .Header_LeftForm p{
     line-height: 24px;
@@ -75,18 +80,20 @@ nav ul{
     margin-bottom: 30px;
 }
 .Header_LeftForm h1{
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     text-transform: uppercase;
     font-family: "Montserrat";
     font-size: 60px;
     color:white;
-    font-weight: 400;
+    font-weight: bold;
+    line-height: 55px;
 
 }
 .Header_LeftForm form{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
+    max-width: 640px;
 }
 .Input{
     margin-right: 20px;
@@ -118,30 +125,33 @@ nav ul{
     /* max-width: 1180px; */
     margin-left: 160px;
     margin-right: 160px;
-    max-height: 550px;
     display: flex;
     text-align: center;
     justify-content: center;flex-direction: column;
     margin-top: 55px;
+    background:#d8e0e8 url(./Images/Background-phone-pattern.jpg);
 }
 .Phone_Top{
-    background-color: white;
-    max-height: 580px;
+    max-height: 540px;
     overflow: hidden;
+    
 }
 .Phone_Top .Text{
     color: #333b42;
     font-size: 40px;
+    margin-top: 70px;
+    margin-bottom: 35px;
 }
 .Phone_Top .Header_LeftForm{
-    margin-top: 35px;
-    line-height: 24px;
+    line-height: 25px;
     overflow: hidden;
     margin-bottom: 30px;
     font-size: 14px;
     color: #74797e;
     max-width: 650px;
     display: inline-block;
+    font-weight: medium;
+    font-family: "Gotham";
 }
 
 /* Марджин помогает выровнять по центру */
@@ -163,18 +173,16 @@ nav ul{
     /* top:calc(925px+580px); */
     background-color: #28c8c6;
 }
-#Iphone{
-}
-
 .Features-content{
     max-height: 780px;
+    height:780px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
     text-align: center;
 }
-.Features-content h3, .Features-content .Features-list-item-p{
+.Features-h3, .Features-content .Features-list-item-p{
     font-family: Montserrat;
     font-weight: bold;
     line-height: 29px;
@@ -190,7 +198,7 @@ nav ul{
     font-size: 17px;
 }
 
-.Features-content .Features-text{
+.Features-text{
     max-width: 650px;
     max-height: 50px;
     overflow: hidden;
@@ -236,4 +244,128 @@ nav ul{
     height: 114px;
     border-radius: 50%;
     background-color: white;
+}
+
+.Design-guidelines{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+    background-color:#f6f9fa;
+    padding-bottom: 100px;
+}
+
+.Design-guidelines h3, .Design-guidelines .Features-text{
+    max-width: 900px;
+    margin-top: 80px;
+}
+.Design-guidelines h3{
+    margin-bottom: 25px;
+}
+.Design-guidelines .Features-text{
+    margin-top: 0;
+    margin-bottom: 45px;
+}
+.Design-guidelines-buttons{
+    columns: 4;
+    display: flex;
+    margin-bottom: 55px;
+}
+.Design-guidelines-buttons button{
+    height: 60px;
+    width: 170px;
+    margin: 0;
+    background-color:white;
+    border: #28c8c6 solid 1px;
+    border-left: 0px;
+    color:#28c8c6;
+    text-transform:uppercase;
+    font-size: 14px;
+    font-family: Gotham;
+    font-weight: bold;
+    line-height: 29px;
+    transition: ease-in-out 0.4s;
+}
+.Design-guidelines-buttons button:hover{
+    background-color:#28c8c6;
+    color:white;
+}
+/* Дело в том, что наш бордер становится 2 px как только мы их схлопываем с помощью флекса,
+А нам нужно его добавить чтобы не удалять у первого эл. левую границу */
+.Design-guidelines-buttons li:first-child button{
+    border: #28c8c6 solid 1px;
+}
+
+.Design-guidelines-listings{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+    flex-direction: row;
+    columns: 3;
+}
+.Design-guidelines-listings-item{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 30%;
+}
+.Design-guidelines-listings-img{
+    max-height: 250px;
+    border-radius: 5px 5px 0px 0px;
+}
+.Design-guidelines-listings-button{
+    max-width: 380px;
+    max-height: 70px;
+    height: 70px;
+    width: 380px;
+    background-color:white;
+    color:#333b42;
+    border:none;
+    border-radius:0px 0px 5px 5px ;
+    font-family: "Montserrat";
+    font-size: 14px;
+    text-transform:uppercase;
+    line-height: 25px;
+}
+.Design-guidelines-listings-button img{
+    position: absolute;
+    padding-left: 70px;
+    padding-right: 50px;
+    padding-top: 4px;
+
+}
+.Ending-title
+{
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    justify-content: center;
+    align-items:start;
+    height: 870px;
+    max-height: 870px;
+    background:url(./Images/Gradient-Map-bg.jpg) top no-repeat;
+    width: 100%;
+}
+
+/* Почему 1000? Я хз почему по-другому он не робит */
+.Ending-title .Header_LeftForm{
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+}
+.Ending-title .Header_LeftForm h1{
+    max-width: 540px;
+    margin-bottom: 40px;
+}
+.Ending-title .Header_LeftForm_Text{
+    max-width: 540px;
+}
+.Ending-arrow-logo{
+    margin-right: 40px;
+}
+@media (max-width:900px){
+
 }
