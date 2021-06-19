@@ -8,6 +8,8 @@
     <style>
         @import url(style.css);
     </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -15,13 +17,13 @@
             <div id='Header_div'>
                 <a href=""><img src="./Images/header_arrow.png" alt="header_arrow" id='header_arrow'></a>
                 <nav>
-                    <ul>
+                    <ul class="Header_nav">
                         <li><a href="" class="Text">About </a></li>
                         <li><a href="" class="Text">Studio </a></li>
                         <li><a href="" class="Text">Pricing </a></li>
                         <li><a href="" class="Text">Blog</a></li>
                     </ul>
-                    <button id="header_button">Join</button>
+                    <button id="header_button">Join <img src="./Images/Join-header-arrow.png" alt="rightarow"></button>
                 </nav>  
             </div>
             <!-- <div class="Separator">
@@ -40,6 +42,7 @@
                         <option value="1st">Design Style</option>
                     </select>
                     <input class="Input" type="text" placeholder="Email">
+                    <button class=" Register"><img src="./Images/Header-button.png" alt="Arrowright"></button>
                 </form>
             </div>
         </div>
@@ -47,14 +50,16 @@
     <div class="round">
         <a href=""><img src="./Images/Scroll_down_arrow.png" alt="Scroll down arrow"></a>
     </div>
-    <div class="Main">
-        <div class="Phone_Top">
-            <p class="Text">Latest Design Style</p>
-            <p class="Header_LeftForm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-            <img id="Iphone"src="./Images/iPhone-6.png" alt="">
+    <div class="Background_phone">
+        <div class="Main">
+            <div class="Phone_Top">
+                <p class="Text">Latest Design Style</p>
+                <p class="Header_LeftForm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                <img id="Iphone"src="./Images/iPhone-6.png" alt="">
+            </div>
         </div>
     </div>
-    <div class="round" id="green_round">
+        <div class="round" id="green_round">
         <a href=""><img src="./Images/Scroll_down_arrow_white.png" alt="Scroll down arrow"></a>
     </div>
     
@@ -141,13 +146,33 @@
         <div class="Header_LeftForm">
             <a href="#" class="Ending-arrow-logo"><img src="./Images/Big_header_arrow.png" alt="BigArrow"></a>
             <div id="Just_Container">
-                <h1 >Push<br> yourself & your designs</h1>
+                <h1 >Push yourself & your<br> designs</h1>
                 <p class="Header_LeftForm_Text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
                 </p>
             </div>
         </div>
-
     </div>    
+    <footer class="Footer">
+        <div class="MacBook"><img src="./Images/MacBook.png" alt="MacBook"></div>
+        <div class="Footer-Left">
+            <ul class="Footer-Info">
+                <li class="Footer-Info-item"><a href="#">About Us</a></li>
+                <li class="Footer-Info-item"><a href="#">Support</a></li>
+                <li class="Footer-Info-item"><a href="#">Why Buy</a></li>
+                <li class="Footer-Info-item"><a href="#">Affiliates</a></li>
+                <li class="Footer-Info-item"><a href="#">Contact Us</a></li>
+                <li class="Footer-Info-item"><a href="#">Returns</a></li>
+                
+            </ul>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+        </div>
+        <div class="Footer-Right">
+            <button class="Tweet"><img src="./Images/tweet.png" alt="tweet"> Tweet</button>
+            <button disabled='false' class="Share"><img src="./Images/share.png" alt="share"><span> Share</span></button>
+            <p>Made in Melbourne By BlazRobar.com @BlazRobar</p>
+            <p>Copyright © 2016, Cool stuff here</p>
+        </div>
+    </footer>
 </body>
 </html>

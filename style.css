@@ -7,6 +7,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    
 
     
 }
@@ -17,7 +18,7 @@ body{
 
 /* Суём туда картинку, чтобы не засорять боди */
 header{
-    background-image: url('./Images/background_header.png');
+    background-image: url('./Images/Header_boots.jpg');
     background-color: #3a0767;
     background-attachment: fixed;
     background-position: top;
@@ -42,16 +43,58 @@ header{
     margin-top: 70px;
 }
 
+#header_button{
+    width: 125px;height: 50px;
+    background-color:#a100ff;
+    color:white;
+    font-weight: bold;
+    font-family:"Gotham" ;
+    font-size:16px ;
+    border: none;
+    border-radius: 3px;
+}
+#header_button img{
+    margin-left: 10px;
+}
+#header_button:hover,
+#header_button:focus{
+    background-color:#9905ef;
+}
 /*Наследуем флекс*/
 nav{
     display: inherit;
     align-items: center;
-    justify-content: space-evenly;
 }
 nav ul{
-    display: inherit;
+    display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
+nav ul li{ 
+    margin-right: 40px;
+}
+nav ul li a{
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+/* Код с сайта: https://moguta.ru/blog/delaem-internet-magazin-vmeste/plavnoe-podchyorkivanie-ssylki-pri-navedenii */
+nav ul li a:after {
+	display: block;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 3px; /*задаём ширину линии*/
+    
+	background-color: #28c8c6; /*задаём цвет линии*/
+	content: "";
+	transition: 0.3s ease-in-out; /*задаём время анимации*/
+}
+
+nav ul li a:hover:after,
+nav ul li a:focus:after {
+	width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
 /*Класс для заголовков - в последующем будет применяться с изменением цвета и размера фонта*/
 .Text{
     font-family: "Gotham";
@@ -105,6 +148,15 @@ nav ul{
     font-family: "Montserrat";
     font-size: 14px;
     padding-left: 25px;
+    border: none;
+}
+.Register{
+    background-color:#28c8c6;
+    width: 65px;height: 60px;
+    border-radius: 4px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
 }
 .Input::placeholder{
     padding-left: 25px;
@@ -121,6 +173,9 @@ nav ul{
 #Design_Style::after {
     content:url(./Images/round_arrow_bottom.png);
 }
+.Background_phone{
+    background:#fff url(./Images/phoneback-20opacity.png);
+}
 .Main{
     /* max-width: 1180px; */
     margin-left: 160px;
@@ -129,7 +184,9 @@ nav ul{
     text-align: center;
     justify-content: center;flex-direction: column;
     margin-top: 55px;
-    background:#d8e0e8 url(./Images/Background-phone-pattern.jpg);
+    opacity: 1;
+    
+    
 }
 .Phone_Top{
     max-height: 540px;
@@ -154,13 +211,13 @@ nav ul{
     font-family: "Gotham";
 }
 
-/* Марджин помогает выровнять по центру */
+/* Left помогает выровнять по центру */
 .round{
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    margin-left:45%;
+    left:45%;
     top:925px;
     width: 114px;
     height: 114px;
@@ -169,7 +226,8 @@ nav ul{
 }
 /* Создаём бирюзовый кружок и добавляет к нему в высоту высоту нашего блока */
 #green_round{
-    top: 1425px;
+    top: 1507px;
+    left:45%;
     /* top:calc(925px+580px); */
     background-color: #28c8c6;
 }
@@ -239,7 +297,7 @@ nav ul{
 .round_bottom{
     position: absolute;
     margin-left:0%;
-    top:2125px;
+    top:2290px;
     width: 114px;
     height: 114px;
     border-radius: 50%;
@@ -348,6 +406,7 @@ nav ul{
     max-height: 870px;
     background:url(./Images/Gradient-Map-bg.jpg) top no-repeat;
     width: 100%;
+    z-index: -2;
 }
 
 /* Почему 1000? Я хз почему по-другому он не робит */
@@ -366,6 +425,76 @@ nav ul{
 .Ending-arrow-logo{
     margin-right: 40px;
 }
+.Footer{
+    max-height: 1050px;
+    padding-bottom:100px
+}
+
+/* z-index помогает нам не иметь возможности выделить макбук а также перекрывать
+бэкграунд предыдущий+ не накладываться сверху на твит-шер кнопки */
+.MacBook{
+    z-index: -1;
+    position: absolute;
+    top:3450px;
+    right:1px;
+    overflow: hidden;
+}
+.Footer{
+    color:#8297a7;
+    font-family: "Montserrat";
+    font-size: 12px;
+    line-height: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+.Footer a{
+    text-decoration: none;
+    color:#8297a7;
+}
+.Footer-Left{
+    margin-top: 770px;
+}
+.Footer-Right{
+    margin-top: 700px;
+    text-align: right;
+}
+
+/* Устанавливаем такую высоту и колумн филл для того, чтобы в нашем списке
+первые 4 эелмента стояли слева остальные справа */
+.Footer-Info{
+    -webkit-column-count:2;  
+    -moz-column-count:2;  
+    height: 150px;
+    column-count:2; 
+    column-gap: 70px;
+    column-fill:auto;
+    margin-bottom: 15px;
+
+}
+.Footer-Right button{
+    color:white;
+    border-radius: 3px;
+    border: none;
+    height:35px ;
+    width: 95px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    line-height: 35px;
+    font-size: 13px;
+    z-index: 10;
+    
+}
+.Footer-Right button img{
+    margin-right: 5px;
+}
+.Tweet{
+    background-color:#69b6f2;
+}
+.Share{
+    background-color:#3a579a;
+    margin-bottom:35px;
+}
+
 @media (max-width:900px){
 
 }
