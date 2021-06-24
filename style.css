@@ -182,11 +182,11 @@ nav ul li a:focus:after {
     margin-right: 160px;
     display: flex;
     text-align: center;
-    justify-content: center;flex-direction: column;
+    justify-content: center;
     margin-top: 55px;
     opacity: 1;
-    
-    
+}
+#Iphone{
 }
 .Phone_Top{
     max-height: 540px;
@@ -206,7 +206,6 @@ nav ul li a:focus:after {
     font-size: 14px;
     color: #74797e;
     max-width: 650px;
-    display: inline-block;
     font-weight: medium;
     font-family: "Gotham";
 }
@@ -452,9 +451,11 @@ nav ul li a:focus:after {
     color:#8297a7;
 }
 .Footer-Left{
+    margin-left: 10px;
     margin-top: 770px;
 }
 .Footer-Right{
+    margin-right: 10px;
     margin-top: 700px;
     text-align: right;
 }
@@ -495,6 +496,13 @@ nav ul li a:focus:after {
     margin-bottom:35px;
 }
 
-@media (max-width:900px){
-
+/* Нужны медиаззапросы:
+*1400 - съехжают кружки стрелки только на телефоне - нужно сделать его фикседом чтобы не растягивася
+*1210 - начинают падать картинки с пальцами
+*700 - чекнуть но картинкам капец
+*500- тоже */
+@media(max-height:1190px){
+    .Iphone{
+        
+    }
 }
