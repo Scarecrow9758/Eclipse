@@ -186,8 +186,6 @@ nav ul li a:focus:after {
     margin-top: 55px;
     opacity: 1;
 }
-#Iphone{
-}
 .Phone_Top{
     max-height: 540px;
     overflow: hidden;
@@ -501,8 +499,57 @@ nav ul li a:focus:after {
 *1210 - начинают падать картинки с пальцами
 *700 - чекнуть но картинкам капец
 *500- тоже */
-@media(max-height:1190px){
-    .Iphone{
-        
-    }
+
+@media(max-width:1190px){
+
+.Design-guidelines-listings{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+.Design-guidelines-listings-item{
+    flex-direction: row;
+    margin-left: 105px;
+    margin-right: 15px;
+    width: 30%;
+    margin-bottom:50px;
+}
+.Design-guidelines-listings-img{
+    max-height: 250px;
+    border-radius: 5px 5px 0px 0px;
+}
+.Design-guidelines-listings-button{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    max-width: 70px;
+    max-height: 205px;
+    height: 205px;
+    width: 70px;
+    background-color:white;
+    color:#333b42;
+    border:none;
+    border-radius:0px 0px 5px 5px ;
+    font-family: "Montserrat";
+    font-size: 14px;
+    text-transform:uppercase;
+    line-height: 25px;
+}
+.Design-guidelines-listings-button img{
+    position: absolute;
+    padding-top: 150px;
+}
+.MacBook{
+    display: none;
+}
+.Footer-Left{
+    margin-left: 10px;
+    margin-top: 170px;
+}
+.Footer-Right{
+    margin-right: 10px;
+    margin-top: 100px;
+    text-align: right;
+}
+
 }
